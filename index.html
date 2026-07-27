@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Information Card</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Student Information Card</h1>
+
+      <div class="form-container">
+        <h2>Enter Details</h2>
+        <form id="studentForm">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" required />
+          </div>
+
+          <div class="form-group">
+            <label for="grade">Grade:</label>
+            <input type="number" id="grade" required />
+          </div>
+
+          <button type="submit" id="submitBtn">Show Result</button>
+        </form>
+      </div>
+
+      <div class="result-container" id="resultContainer">
+        <h2>Student Card</h2>
+        <p><strong>Name:</strong> <span id="outName">--</span></p>
+        <p><strong>Age:</strong> <span id="outAge">--</span></p>
+        <p><strong>Grade:</strong> <span id="outGrade">--</span></p>
+        <p>
+          <strong>Status:</strong>
+          <span id="outStatus" class="status-default">--</span>
+        </p>
+      </div>
+
+      <div class="bonus-container">
+        <h2>onclick vs addEventListener()</h2>
+
+        <div class="bonus-box">
+          <h3>onclick</h3>
+          <p>
+            The onclick attribute is set directly in the HTML or JS. It only
+            allows you to add one function to a click. If you add a second one,
+            it overwrites the first one.
+          </p>
+        </div>
+
+        <div class="bonus-box">
+          <h3>addEventListener()</h3>
+          <p>
+            The addEventListener() method is a modern way to listen for events
+            in JavaScript. It lets you attach multiple functions to the same
+            event on an element without overwriting them.
+          </p>
+        </div>
+
+        <div class="bonus-box pref-reason">
+          <h3>Why addEventListener() is preferred:</h3>
+          <p>
+            We prefer using addEventListener() in modern JavaScript because it
+            keeps our HTML code clean from JavaScript code. It also prevents
+            scripts from overwriting each other when they need to do something
+            on the same click. Finally, it makes it easier to remove the
+            listener later if we want to stop listening to events.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
